@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth !important;
+}
 /* Search Result */
 .card {
   width: 100%;
@@ -11,3 +14,9 @@
   padding: 20px;
 }
 /* Search Result End */
+
+/* Profile */
+.notifications {
+  margin-top: 70px;
+}
+/* Profile End */
