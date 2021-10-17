@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,12 +87,30 @@
                             <li>
                                 <a href="pages/gallery.html">Gallery</a>
                             </li>
-                            <li>
-                                <a href="pages/login.html">Login</a>
-                            </li>
-                            <li>
-                                <a href="pages/profile.html">Profile</a>
-                            </li>
+                            <?php
+
+                            if (isset($_SESSION['username'])){
+                                echo 
+                                '<li>
+                                    <div style="margin-top: 10%;" class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">'
+                                    .$_SESSION["username"].
+                                    '<span style="margin-left: 10%;" class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="pages/profile.html">Profile</a></li>
+                                    <li><a href="php/logout.php">Logout</a></li>
+                                    </ul>
+                                    </div>
+                                </li>';
+                            }
+                            else{
+                                echo '<li>
+                                        <a href="pages/login.html">Login</a>
+                                      </li>';
+                            }
+                            
+                            ?>
                         </ul>
                     </div>
                 </div>
@@ -364,7 +383,7 @@
 
                     <div class="appointment-form-wrapper text-center clearfix">
                         <h3 class="join-heading">Register with us</h3>
-                        <form class="appoinment-form">
+                        <form action="php/donor-register.php" method="post" class="appoinment-form">
                             <div class="form-group col-md-6">
                                 <input id="your_name" class="form-control" placeholder="Name" type="text">
                             </div>
@@ -375,22 +394,22 @@
                                 <input id="your_phone" class="form-control" placeholder="Phone" type="text">
                             </div>
                             <div class="form-group col-md-6">
+                                <input id="your_name" class="form-control" placeholder="Location" type="text">
+                            </div>
+                            <div class="form-group col-md-6">
                                 <div class="select-style">
                                     <select class="form-control" name="blood_group">
                                         <option>Blood Group</option>
-                                        <option>Los Angles</option>
-                                        <option>California</option>
+                                        <option>O+</option>
+                                        <option>A+</option>
                                     </select>
                                 </div>
                             </div>
-
                             <div class="form-group col-md-6">
-                                <input id="your_name" class="form-control" placeholder="Location" type="text">
+                                <input id="your_name" class="form-control" placeholder="Password" type="text">
                             </div>
-
-                            <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                <textarea id="textarea_message" class="form-control" rows="4"
-                                    placeholder="Your Message..."></textarea>
+                            <div class="form-group col-md-6">
+                                <input id="your_name" class="form-control" placeholder="Confirm Password" type="text">
                             </div>
 
                             <div class="form-group col-md-12 col-sm-12 col-xs-12">

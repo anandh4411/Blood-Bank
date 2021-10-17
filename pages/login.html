@@ -38,16 +38,20 @@
                     <div class="appointment-form-wrapper text-center clearfix">
                         <a class="logo" href="index.html"><img alt="" src="../images/logo.png"></a>
                         <h3 class="join-heading">Login</h3>
-                        <form class="appoinment-form">
+                        <form action="../php/user-login.php" method="post" class="appoinment-form">
                             <div class="form-group col-md-6">
-                                <input id="your_email" class="form-control" placeholder="Email" type="email">
+                                <input name="phone" id="your_email" class="form-control" placeholder="Phone" type="phone">
                             </div>
                             <div class="form-group col-md-6">
-                                <input id="your_name" class="form-control" placeholder="Password" type="text">
+                                <input name="password" id="your_name" class="form-control" placeholder="Password" type="text">
                             </div>
                             <div style="margin-bottom: 15px;" class="text-center">
                                 Don't have account yet?
                                 <a href="signup.html">Signup</a>
+                            </div>
+                            <div style="margin-bottom: 15px;" class="text-center">
+                                Are you a blood donor?
+                                <a href="donor-login.html">Donor Login</a>
                             </div>
                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                 <button id="btn_submit" class="btn-submit" type="submit">Login</button>
