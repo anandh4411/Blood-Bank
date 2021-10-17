@@ -7,14 +7,16 @@ $email = $_POST["email"];
 $phone = $_POST["phone"];
 $location = $_POST["location"];
 $blood_group = $_POST["blood_group"];
+$age = $_POST["age"];
 $password = $_POST["password"];
 $cpassword = $_POST["cpassword"];
 
 if ($password == $cpassword) {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-    $query = "INSERT INTO donor (name, email, phone, location, blood_group, password) 
-    VALUES ('$name', '$email', '$phone', '$location', '$blood_group', '$hashed_password')";
+    $query = "INSERT INTO donor (name, email, phone, location, blood_group, age, password) 
+    VALUES ('$name', '$email', '$phone', '$location', '$blood_group', '$age', '$hashed_password')";
     mysqli_query($connect, $query);
+    header("Location: ../index.php");
 }
 else {
     echo '<!DOCTYPE html>

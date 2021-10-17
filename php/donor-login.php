@@ -11,8 +11,12 @@ $result = mysqli_query($connect, $query);
 while($row = mysqli_fetch_array($result)){
     $match = password_verify($password, $row["password"]);
     if ($phone == $row["phone"] && $match) {
-        $name = $row["name"];
-        $_SESSION['username'] = $name;
+        $_SESSION['name'] = $row["name"];
+        $_SESSION['email'] = $row["email"];
+        $_SESSION['phone'] = $row["phone"];
+        $_SESSION['location'] = $row["location"];
+        $_SESSION['blood_group'] = $row["blood_group"];
+        $_SESSION['age'] = $row["age"];
         header("Location: ../index.php");
     }
     else{

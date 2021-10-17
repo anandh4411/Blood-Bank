@@ -74,8 +74,8 @@
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li style="margin-top: 1%;">
-                                <form class="form-inline my-2 my-lg-0">
-                                    <input class="form-control mr-sm-2" type="search" placeholder="Search Blood Group"
+                                <form action="php/search.php" method="post" class="form-inline my-2 my-lg-0">
+                                    <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search Blood Group"
                                         aria-label="Search">
                                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                                 </form>
@@ -89,16 +89,16 @@
                             </li>
                             <?php
 
-                            if (isset($_SESSION['username'])){
+                            if (isset($_SESSION['name'])){
                                 echo 
                                 '<li>
                                     <div style="margin-top: 10%;" class="dropdown">
                                     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">'
-                                    .$_SESSION["username"].
+                                    .$_SESSION["name"].
                                     '<span style="margin-left: 10%;" class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a href="pages/profile.html">Profile</a></li>
+                                    <li><a href="php/profile.php">Profile</a></li>
                                     <li><a href="php/logout.php">Logout</a></li>
                                     </ul>
                                     </div>
@@ -385,16 +385,16 @@
                         <h3 class="join-heading">Register with us</h3>
                         <form action="php/donor-register.php" method="post" class="appoinment-form">
                             <div class="form-group col-md-6">
-                                <input id="your_name" class="form-control" placeholder="Name" type="text">
+                                <input name="name" id="your_name" class="form-control" placeholder="Name" type="text">
                             </div>
                             <div class="form-group col-md-6">
-                                <input id="your_email" class="form-control" placeholder="Email" type="email">
+                                <input name="email" id="your_email" class="form-control" placeholder="Email" type="email">
                             </div>
                             <div class="form-group col-md-6">
-                                <input id="your_phone" class="form-control" placeholder="Phone" type="text">
+                                <input name="phone" id="your_phone" class="form-control" placeholder="Phone" type="text">
                             </div>
                             <div class="form-group col-md-6">
-                                <input id="your_name" class="form-control" placeholder="Location" type="text">
+                                <input name="location" id="your_name" class="form-control" placeholder="Location" type="text">
                             </div>
                             <div class="form-group col-md-6">
                                 <div class="select-style">
@@ -405,11 +405,14 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group col-md-6">
-                                <input id="your_name" class="form-control" placeholder="Password" type="text">
+                            <div style="margin-bottom: 10px;" class="form-group col-md-6">
+                                <input name="age" id="your_name" class="form-control" placeholder="Age" type="number">
                             </div>
                             <div class="form-group col-md-6">
-                                <input id="your_name" class="form-control" placeholder="Confirm Password" type="text">
+                                <input name="password" id="your_name" class="form-control" placeholder="Password" type="text">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input name="cpassword" id="your_name" class="form-control" placeholder="Confirm Password" type="text">
                             </div>
 
                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
