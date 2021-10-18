@@ -1,6 +1,6 @@
 <?php
 
-require_once 'db.php';
+require_once '../db.php';
 
 $name = $_POST["name"];
 $email = $_POST["email"];
@@ -23,15 +23,15 @@ if ($password == $cpassword) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Success</title>
     
-        <link rel="shortcut icon" href="../images/favicon.png" />
+        <link rel="shortcut icon" href="../../images/favicon.png" />
         <!-- The styles -->
-        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../css/bootstrap.min.css" />
     </head>
     
     <body>
         <div style="margin-top: 40px;" class="container">
             <h1>Your user account is registered successfuly!</h1>
-            <a style="margin-top: 20px;" class="btn btn-primary" href="../index.php">Back to Home</a>
+            <a style="margin-top: 20px;" class="btn btn-primary" href="reciever.php">Back to Home</a>
         </div>
     </body>
     
@@ -47,15 +47,15 @@ else {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Error</title>
     
-        <link rel="shortcut icon" href="../images/favicon.png" />
+        <link rel="shortcut icon" href="../../images/favicon.png" />
         <!-- The styles -->
-        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../css/bootstrap.min.css" />
     </head>
     
     <body>
         <div style="margin-top: 40px;" class="container">
             <h1>Passwords does not match!</h1>
-            <a style="margin-top: 20px;" class="btn btn-primary" href="../pages/donor-register.html">Back to Register</a>
+            <a style="margin-top: 20px;" class="btn btn-primary" href="../../pages/donor-register.html">Back to Register</a>
         </div>
     </body>
     
