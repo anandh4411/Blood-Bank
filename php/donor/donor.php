@@ -376,7 +376,7 @@
 
                     <div class="appointment-form-wrapper text-center clearfix">
                         <h3 class="join-heading">Register with us</h3>
-                        <form action="../donor-register.php" method="post" class="appoinment-form">
+                        <form action="donor-register.php" method="post" class="appoinment-form">
                             <div class="form-group col-md-6">
                                 <input name="name" id="your_name" class="form-control" placeholder="Name" type="text">
                             </div>
@@ -393,8 +393,14 @@
                                 <div class="select-style">
                                     <select class="form-control" name="blood_group">
                                         <option>Blood Group</option>
-                                        <option>O+</option>
                                         <option>A+</option>
+                                        <option>A-</option>
+                                        <option>B+</option>
+                                        <option>B-</option>
+                                        <option>O+</option>
+                                        <option>O-</option>
+                                        <option>AB+</option>
+                                        <option>AB-</option>
                                     </select>
                                 </div>
                             </div>

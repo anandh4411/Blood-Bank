@@ -41,8 +41,14 @@
                             <div class="select-style">
                                 <select class="form-control" name="blood_group">
                                     <option><?php echo $_SESSION["donor-blood_group"]; ?></option>
-                                    <option>Los Angles</option>
-                                    <option>California</option>
+                                    <option>A+</option>
+                                    <option>A-</option>
+                                    <option>B+</option>
+                                    <option>B-</option>
+                                    <option>O+</option>
+                                    <option>O-</option>
+                                    <option>AB+</option>
+                                    <option>AB-</option>
                                 </select>
                             </div>
                         </div>
